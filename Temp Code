@@ -1,0 +1,18 @@
+#include <stdio.h>
+
+int main ()
+{
+
+
+    //four
+    int cel;
+
+    printf("Input a temprature (in Celcius)");
+    scanf("%d",&cel);
+
+    float fah = (cel * 9.0/5.0 )+32;
+    printf("%f degrees Fahrenheit.",fah);
+
+
+    return 0;
+}
