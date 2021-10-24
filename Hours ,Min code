@@ -1,0 +1,18 @@
+#include <stdio.h>
+
+int main ()
+{
+
+
+    float hours , min ;
+    printf("Input Hours: ",&hours);
+    scanf("%f",&hours);
+    printf("Input Minutes: ",&min);
+    scanf("%f" , &min);
+
+    float total = (hours*60)+min;
+    printf("Total : %.0f",total);
+
+
+    return 0;
+}
