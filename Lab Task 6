@@ -1,0 +1,91 @@
+/* PROBLEM:
+ Sonia sells flower bouquets in a local shop at Mall of Lahore. She wants to keep record of her
+
+bouquets. She has asked you to develop a simple program that inputs prices of different
+
+bouquets sold per day (using while loop, -1 to exit) and provide the following outputs:
+
+i. How many bouquets have been sold?
+
+ii. What was the value of the most expensive bouquet sold?
+
+iii. What was the value of the least expensive bouquets sold?
+
+iv. What is the average value of bouquets?
+
+Expected Output:
+
+Input bouquet price or -1 to exit: 23 45 21 -1
+
+No. of Bouquet Sold: 3
+
+Expensive Bouquet: Rs. 45
+
+Least Expensive Bouquet: Rs. 21
+
+Average: Rs.29.67 */
+
+#include <stdio.h>
+
+
+
+int main ()
+{
+
+
+
+    int price=0 , count=0 , sum=0 , min=0 , max=0;
+
+
+
+    while (price != -1)
+    {
+
+
+
+        printf("Enter Price of Phoolo ka Guldastaa or Enter -1 To Exit The Program" );
+        scanf("%d" , &price);
+
+
+
+        if (count == 0){
+            min = price ;
+            max = price ;
+        }
+
+
+
+
+
+        if (price == -1)
+        {
+            break;
+        }
+
+
+
+
+        if (price > max){
+            max = price;
+        }
+        else if (price < min)
+        {
+            min = price ;
+        }
+
+
+
+    sum = sum + price;
+    count ++;
+
+
+
+    }
+    printf("No. of Bouquet Sold : %d\n" , count);
+    printf("Average: Rs.%f\n", sum *0.1/ count);
+    printf("Least Expensive Bouquet: Rs.%d \nExpensive Bouquet: Rs.%d" , min , max);
+
+
+
+    return 0;
+}
